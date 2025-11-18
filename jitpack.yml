@@ -4,4 +4,4 @@ before_install:
   - sdk install java 11.0.2-open
   - sdk use java 11.0.2-open
 install:
-  - ./gradlew clean -Pgroup=com.github.JWShroyer -xtest -xsignMavenPublication :openai-client:assemble :openai-client:publishToMavenLocal :openai-core:assemble :openai-core:publishToMavenLocal :openai-client-bom:assemble :openai-client-bom:publishToMavenLocal
+  - ./gradlew clean -Pgroup=com.github.JWShroyer -xtest -x signJsPublication -x signJvmPublication -x signKotlinMultiplatformPublication -x signLinuxX64Publication -x signMingwX64Publication -x signWasmJsPublication :openai-client:assemble :openai-client:publishToMavenLocal :openai-core:assemble :openai-core:publishToMavenLocal :openai-client-bom:assemble :openai-client-bom:publishToMavenLocal
